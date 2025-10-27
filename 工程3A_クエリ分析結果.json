@@ -1,0 +1,237 @@
+{
+    "analysis_date": "2025-10-27T20:08:45+09:00",
+    "keyword": "キャリアアップ に資する 教育訓練",
+    "core_question": {
+        "main_question": "改正派遣法の教育訓練義務（年8時間）を、どうすれば最も低コストかつ効率的に達成し、法令違反リスクを回避できるか？",
+        [cite_start
+        ]"underlying_concern": "法令違反によるペナルティ（許可更新への影響）[cite: 3]、集合研修の高コスト、派遣スタッフが点在し研修実施が困難、eラーニングにしても受講率が上がらないのではないかという不安。",
+        "time_urgency": "高（事業報告書や許可更新の期限が迫っているため）"
+    },
+    "question_hierarchy": {
+        "level1_primary_questions": [
+            {
+                "id": "L1-1",
+                [cite_start
+                ]"question": "「キャリアアップに資する教育訓練」の法的要件（義務）とは具体的に何か？[cite: 3, 6]",
+                "source_competitor_ids": [
+                    "5",
+                    "9"
+                ]
+            },
+            {
+                "id": "L1-2",
+                [cite_start
+                ]"question": "何を（カリキュラム）、いつ、何時間（年8時間）やれば義務を果たせるのか？[cite: 1, 3, 6]",
+                "source_competitor_ids": [
+                    "2",
+                    "5",
+                    "9"
+                ]
+            },
+            {
+                "id": "L1-3",
+                [cite_start
+                ]"question": "実施しないとどうなるのか？（ペナルティは？事業報告書への影響は？） [cite: 3]",
+                "source_competitor_ids": [
+                    "5",
+                    "7"
+                ]
+            },
+            {
+                "id": "L1-4",
+                "question": "研修時間は有給で支払う必要があるか？法定休日の場合、割増賃金は発生する？",
+                "source_competitor_ids": [
+                    "7"
+                ]
+            }
+        ],
+        "level2_secondary_questions": [
+            {
+                "id": "L2-1",
+                "parent_id": "L1-2",
+                [cite_start
+                ]"question": "どうやって実施するのが一番効率的か？（OJT、集合研修、eラーニングの比較）[cite: 3, 6]",
+                "source_competitor_ids": [
+                    "5",
+                    "9"
+                ]
+            },
+            {
+                "id": "L2-2",
+                "parent_id": "L2-1",
+                [cite_start
+                ]"question": "eラーニングで対応する場合のメリット・デメリットは？[cite: 3, 6]",
+                "source_competitor_ids": [
+                    "5",
+                    "9"
+                ]
+            },
+            {
+                "id": "L2-3",
+                "parent_id": "L2-1",
+                "question": "結局、一番安く（低コストで）済ませる方法は？",
+                "source_competitor_ids": []
+            },
+            {
+                "id": "L2-4",
+                "parent_id": "L1-2",
+                [cite_start
+                ]"question": "「教育訓練計画」は具体的にどうやって作ればいいのか？[cite: 6]",
+                "source_competitor_ids": [
+                    "9"
+                ]
+            },
+            {
+                "id": "L2-5",
+                "parent_id": "L1-3",
+                "question": "スタッフが受講してくれない（受講率が低い）場合、どう管理すればいいか？",
+                "source_competitor_ids": [
+                    "7"
+                ]
+            },
+            {
+                "id": "L2-6",
+                "parent_id": "L2-3",
+                "question": "この研修に使える助成金はあるか？",
+                "source_competitor_ids": []
+            },
+            {
+                "id": "L2-7",
+                "parent_id": "L1-2",
+                [cite_start
+                ]"question": "義務である3年目以降（4年目〜）はどう対応すればいいか？[cite: 3]",
+                "source_competitor_ids": [
+                    "5"
+                ]
+            },
+            {
+                "id": "L2-8",
+                "parent_id": "L1-1",
+                [cite_start
+                ]"question": "無期雇用者や外国人スタッフへの対応はどうすればいいか？[cite: 3]",
+                "source_competitor_ids": [
+                    "5"
+                ]
+            }
+        ]
+    },
+    "persona_deep_dive": {
+        "detailed_profile": {
+            "name": "佐藤（さとう）みどり",
+            "age": 42,
+            "job_title": "中小派遣会社（派遣スタッフ300名）の人事・教育担当（兼総務）",
+            "industry": "人材派遣（中小企業）",
+            "it_literacy": "中（Excelでの勤怠管理、Wordでの契約書作成はできるが、新しいSaaS導入には少し抵抗がある）",
+            [cite_start
+            ]"pain_point": "改正派遣法で義務化された「キャリアアップに資する教育訓練」（年間8時間）にどう対応すればよいか分からない。スタッフが各地に点在しており、集合研修は非効率でコストがかかりすぎる。[cite: 3] 研修を有給扱いにするときのコスト計算や、受講率の低さに悩んでいる。"
+        },
+        "search_scenario": {
+            "location": "会社の自席デスク",
+            "time": "平日の午後3時（月末の事業報告書の準備中）",
+            [cite_start
+            ]"trigger": "厚労省から届いた「労働者派遣事業報告書」の「（６）キャリア形成支援制度に関する事項」の欄をどう埋めるか悩んでいる。昨年は「実施人数 0名」で出したが、今年は許可更新も控えており、さすがにまずいと感じている。[cite: 3]",
+            "device": "会社のデスクトップPC（Windows, Chromeブラウザ）"
+        },
+        "emotional_state": {
+            "primary_emotion": "不安・焦り",
+            "secondary_emotions": [
+                "煩わしさ（本業が忙しいのに）",
+                [cite_start
+                ]"切実な悩み（どうやって実施するの？[cite: 3] 有給コストどうする？ 受講率低い…）"
+            ]
+        },
+        "information_processing_style": {
+            "style": "結論ファースト・具体性重視",
+            [cite_start
+            ]"preference": "抽象的な理念（例：競合8[cite: 5][cite_start]）よりも、「義務を達成できる一番安くて簡単な方法」「具体的なカリキュラム例」「料金」を求めている。厚労省[cite: 1, 3][cite_start]や社労士[cite: 3]といった権威性を気にする。"
+        },
+        "behavioral_economics_profile": {
+            "loss_aversion": {
+                "feared_loss": "「法令違反」による「許可取り消し」リスク、事業報告書での「実績ゼロ」報告。",
+                "specific_loss": "集合研修にかかる高額な「費用」と「時間（移動時間、有給の研修時間）」、割増賃金の発生。"
+            },
+            "social_proof": {
+                "trusted_source": "「自社と同じ規模（中小）の派遣会社」が「eラーニングで義務を達成した」事例。",
+                "desired_data": "「導入企業○○社」よりも「受講率90%達成」「管理工数80%削減」といった効率化の実績。"
+            },
+            "authority": {
+                [cite_start
+                ]"trusted_source": "「厚生労働省の要件に準拠」[cite: 3, 6][cite_start]、「改正派遣法 完全対応」、「社労士監修」。[cite: 3]",
+                "trusted_entity": "厚生労働省、労働局"
+            },
+            "consistency": {
+                "decision_process": "「法令遵守」という公的コミットメントと、「コスト削減」という社内ミッションを**両立**できる選択肢（＝安価なeラーニング）を選ぶことで、自身の行動の一貫性を保とうとする。"
+            },
+            "liking": {
+                [cite_start
+                ]"preferred_tone": "「担当者の悩みに寄り添う」（例：「受講率が上がらなくてお困りですよね？」）、専門的だが分かりやすい（「社労士が解説」[cite: 3]）。",
+                [cite_start
+                ]"disliked_tone": "抽象的な精神論（「キャリア形成とは…」[cite: 5]）、大企業向けの高度な理論。"
+            },
+            "scarcity": {
+                "trigger": "「事業報告書の提出期限」「許可更新のタイミング」「助成金の申請期限」。",
+                "call_to_action": "「今なら導入初期費用が無料」「先着50社限定 社労士相談」。"
+            }
+        }
+    },
+    "search_intent_analysis": {
+        "primary_intent": "Informational (情報収集)",
+        "intent_distribution": [
+            {
+                "type": "Informational",
+                "percentage": 70,
+                [cite_start
+                ]"description": "法的要件、時間数、有給か否か、eラーニングでよいか、4年目以降の扱いなど、義務を果たすための具体的な情報を探している。 [cite: 3, 6]"
+            },
+            {
+                "type": "Commercial Investigation",
+                "percentage": 15,
+                "description": "どのeラーニングサービスが一番安くて簡単か（法令要件を満たせるか）比較検討している。"
+            },
+            {
+                "type": "Transactional",
+                "percentage": 10,
+                "description": "eラーニングサービスの資料請求やデモ申込を検討している。"
+            },
+            {
+                "type": "Navigational",
+                "percentage": 5,
+                [cite_start
+                ]"description": "厚生労働省の公式PDFやガイドラインを探している。[cite: 1, 3]"
+            }
+        ]
+    },
+    "three_phase_psychological_mapping": {
+        "phase1_anxiety": {
+            "emotional_state": "強い不安と焦り。「やばい、法令違反かも」「報告書どうしよう」「許可更新できなかったら会社が潰れる」。",
+            [cite_start
+            ]"brain_trigger": "扁桃体（Amygdala）: 「法令違反」「許可取り消し」「年8時間（義務）」「有給・無償」 [cite: 6] というネガティブなキーワード（損失）に強く反応する。",
+            "content_strategy": "まず「法令違反のリスク」を明確にし（損失回避）、不安を最大化させる。直後に「でも大丈夫です。簡単な解決策があります」と提示し、強く惹きつける。"
+        },
+        "phase2_understanding": {
+            "judgment_criteria": [
+                "① コスト（一番安いか）",
+                "② 効率・簡便性（管理が楽か、受講率を上げられるか）",
+                [cite_start
+                ]"③ 法的要件の充足（厚労省の要件を満たしているか[cite: 3, 6]）"
+            ],
+            [cite_start
+            ]"brain_trigger": "前頭前野（Prefrontal Cortex）: 「OJT vs 集合研修 vs eラーニング」の**比較表**[cite: 6][cite_start]、具体的な「カリキュラム例」、「計画の立て方」[cite: 6]といった論理的・比較可能な情報を処理する。",
+            "content_strategy": "eラーニングが「コスト」「効率」「法令対応」の全てを満たす最適な解決策であることを論理的に証明する（権威性、社会的証明）。"
+        },
+        "phase3_action": {
+            "action_barriers": [
+                "どのサービスを選べばいいか分からない（選択の麻痺）",
+                "上司（社長）への稟議が通るか不安（予算）",
+                "外国人スタッフ対応のコースがあるか？"
+            ],
+            "brain_trigger": "線条体（Striatum）: 「導入実績（中小企業）」「具体的な料金プラン（低予算）」「外国人対応コースあり」「今すぐデモが見れる」といった、導入後のポジティブな未来（報酬）を予測させ、行動を決定させる。",
+            "content_strategy": "サービス導入（CTA）への最後の障壁を取り除く。「低予算プラン」の提示、「外国人対応」というニッチな強みの訴求、「簡単見積もり」「無料デモ」へ誘導する（希少性も活用）。",
+            "cvr_targets": {
+                "early_cta_cvr": 2.5,
+                "mid_cta_cvr": 3,
+                "final_cta_cvr": 3.5
+            }
+        }
+    }
+}

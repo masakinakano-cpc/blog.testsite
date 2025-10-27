@@ -1,0 +1,40 @@
+{
+    "fact_check_date": "2025-10-27T22:05:00+09:00",
+    "verification_target": "工程7B_本文ブラッシュアップ版.md",
+    "verification_source": "工程5_一次情報収集結果.json",
+    "verification_summary": {
+        "status": "Completed with issues",
+        "total_data_points_checked": 42,
+        "total_references_checked": 17,
+        "total_urls_checked": 17,
+        "issues_found": 2,
+        "accuracy_score_before_correction": 0.95
+    },
+    "issues_found": [
+        {
+            "issue_id": "ISS-001",
+            "location": "H2-8: 【差別化】増加する外国人派遣スタッフ（230万人）への教育訓練、どう対応する？",
+            "severity": "Medium",
+            "issue_type": "Missing_Source",
+            "description": "H2-8の本文中、「前年比12.4%増」「国籍別ではベトナムが最多」「64.8%が労働力不足の解消」という3つの重要なデータポイントが、出典（Citation）なしで記載されています。工程5の一次情報（JETRO-2025-01-Foreigner, MHLW-2025-05-Foreigner）で裏付けが取れているため、信頼性担保のために出典を追記する必要があります。",
+            "current_content": "「これは前年比で12.4%増（約25万4千人増）という驚異的な伸びです。国籍別ではベトナムが最多（57万人）で...(中略)...その割合は64.8%に達しています。」",
+            "correction_required": "「12.4%増」に (出典: ジェトロ...2025年2月) を、「64.8%」に (出典: レバレジーズグローバル...2025年4月) を追記します。",
+            "source_verification": "JETRO-2025-01-Foreigner, MHLW-2025-05-Foreigner"
+        },
+        {
+            "issue_id": "ISS-002",
+            "location": "H2-11: よくある質問（FAQ）｜キャリアアップに資する教育訓練",
+            "severity": "Low",
+            "issue_type": "Missing_Requirement (LLMO/KGI)",
+            "description": "工程8Bのガイドラインでは、FAQセクションに「本文セクションへの内部リンク」および「5つ程度のCTA（KGIへの誘導）」を統合することが求められています。工程7BのFAQセクション（16個）には、これらが含まれていません。",
+            "current_content": "「Q: 交通費は支給すべきですか？ A: 集合研修を特定の会場で実施し...(後略)」",
+            "correction_required": "各FAQに関連する本文（H2-2, H2-3, H2-6など）への誘導リンクを追加します。また、5つのFAQにH2-10（無料相談）へのCTAを自然に統合します。",
+            "source_verification": "detailed_guidelines.md (Task 8B requirements)"
+        }
+    ],
+    "recommendations": [
+        "Part 2で生成される「工程8_FAQ統合版.md」で、ISS-001（出典追記）およびISS-002（FAQ強化）を修正済みです。これを使用してください。",
+        "全てのURLは有効（404エラーなし）でした。",
+        "全てのデータ（助成金額、統計、費用相場）は工程5と一致しており、ISS-001以外の引用は正確でした。"
+    ]
+}

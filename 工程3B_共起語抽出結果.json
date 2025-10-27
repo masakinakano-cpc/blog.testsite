@@ -1,0 +1,1438 @@
+{
+    "extraction_date": "2025-10-27T20:29:28+09:00",
+    "keyword": "キャリアアップ に資する 教育訓練",
+    "total_articles_analyzed": 10,
+    "articles_with_body_text": 4,
+    "cooccurrence_words": [
+        {
+            "word": "派遣社員",
+            "frequency": 112,
+            "coverage": 4,
+            "score": 1,
+            "category": "Essential"
+        },
+        {
+            "word": "義務",
+            "frequency": 95,
+            "coverage": 4,
+            "score": 0.99,
+            "category": "Essential"
+        },
+        {
+            "word": "労働者派遣法",
+            "frequency": 88,
+            "coverage": 4,
+            "score": 0.98,
+            "category": "Essential"
+        },
+        {
+            "word": "eラーニング",
+            "frequency": 82,
+            "coverage": 4,
+            "score": 0.97,
+            "category": "Essential"
+        },
+        {
+            "word": "計画",
+            "frequency": 79,
+            "coverage": 4,
+            "score": 0.96,
+            "category": "Essential"
+        },
+        {
+            "word": "実施",
+            "frequency": 75,
+            "coverage": 4,
+            "score": 0.95,
+            "category": "Essential"
+        },
+        {
+            "word": "スキル",
+            "frequency": 72,
+            "coverage": 4,
+            "score": 0.94,
+            "category": "Essential"
+        },
+        {
+            "word": "キャリア形成",
+            "frequency": 68,
+            "coverage": 4,
+            "score": 0.93,
+            "category": "Essential"
+        },
+        {
+            "word": "派遣元",
+            "frequency": 65,
+            "coverage": 4,
+            "score": 0.92,
+            "category": "Essential"
+        },
+        {
+            "word": "派遣先",
+            "frequency": 63,
+            "coverage": 4,
+            "score": 0.91,
+            "category": "Essential"
+        },
+        {
+            "word": "目的",
+            "frequency": 60,
+            "coverage": 4,
+            "score": 0.9,
+            "category": "Essential"
+        },
+        {
+            "word": "時間",
+            "frequency": 58,
+            "coverage": 4,
+            "score": 0.89,
+            "category": "Essential"
+        },
+        {
+            "word": "有給",
+            "frequency": 55,
+            "coverage": 3,
+            "score": 0.88,
+            "category": "Essential"
+        },
+        {
+            "word": "無償",
+            "frequency": 52,
+            "coverage": 3,
+            "score": 0.87,
+            "category": "Essential"
+        },
+        {
+            "word": "措置",
+            "frequency": 50,
+            "coverage": 4,
+            "score": 0.86,
+            "category": "Essential"
+        },
+        {
+            "word": "OJT",
+            "frequency": 48,
+            "coverage": 3,
+            "score": 0.85,
+            "category": "Essential"
+        },
+        {
+            "word": "段階的かつ体系的",
+            "frequency": 47,
+            "coverage": 4,
+            "score": 0.84,
+            "category": "Essential"
+        },
+        {
+            "word": "3年間",
+            "frequency": 45,
+            "coverage": 3,
+            "score": 0.83,
+            "category": "Essential"
+        },
+        {
+            "word": "8時間以上",
+            "frequency": 44,
+            "coverage": 3,
+            "score": 0.82,
+            "category": "Essential"
+        },
+        {
+            "word": "キャリアコンサルティング",
+            "frequency": 42,
+            "coverage": 3,
+            "score": 0.81,
+            "category": "Essential"
+        },
+        {
+            "word": "厚生労働省",
+            "frequency": 40,
+            "coverage": 3,
+            "score": 0.8,
+            "category": "Essential"
+        },
+        {
+            "word": "要件",
+            "frequency": 39,
+            "coverage": 4,
+            "score": 0.79,
+            "category": "Essential"
+        },
+        {
+            "word": "機会",
+            "frequency": 38,
+            "coverage": 4,
+            "score": 0.78,
+            "category": "Essential"
+        },
+        {
+            "word": "提供",
+            "frequency": 37,
+            "coverage": 4,
+            "score": 0.77,
+            "category": "Essential"
+        },
+        {
+            "word": "正社員",
+            "frequency": 35,
+            "coverage": 4,
+            "score": 0.76,
+            "category": "Essential"
+        },
+        {
+            "word": "内容",
+            "frequency": 34,
+            "coverage": 4,
+            "score": 0.75,
+            "category": "Essential"
+        },
+        {
+            "word": "対象",
+            "frequency": 33,
+            "coverage": 4,
+            "score": 0.74,
+            "category": "Essential"
+        },
+        {
+            "word": "義務化",
+            "frequency": 32,
+            "coverage": 3,
+            "score": 0.73,
+            "category": "Essential"
+        },
+        {
+            "word": "費用",
+            "frequency": 30,
+            "coverage": 3,
+            "score": 0.72,
+            "category": "Essential"
+        },
+        {
+            "word": "策定",
+            "frequency": 29,
+            "coverage": 3,
+            "score": 0.71,
+            "category": "Essential"
+        },
+        {
+            "word": "賃金",
+            "frequency": 28,
+            "coverage": 2,
+            "score": 0.7,
+            "category": "Standard"
+        },
+        {
+            "word": "処遇",
+            "frequency": 27,
+            "coverage": 2,
+            "score": 0.69,
+            "category": "Standard"
+        },
+        {
+            "word": "向上",
+            "frequency": 26,
+            "coverage": 2,
+            "score": 0.68,
+            "category": "Standard"
+        },
+        {
+            "word": "能力",
+            "frequency": 25,
+            "coverage": 3,
+            "score": 0.67,
+            "category": "Standard"
+        },
+        {
+            "word": "研修",
+            "frequency": 24,
+            "coverage": 2,
+            "score": 0.66,
+            "category": "Standard"
+        },
+        {
+            "word": "無期雇用",
+            "frequency": 23,
+            "coverage": 3,
+            "score": 0.65,
+            "category": "Standard"
+        },
+        {
+            "word": "カリキュラム",
+            "frequency": 22,
+            "coverage": 2,
+            "score": 0.64,
+            "category": "Standard"
+        },
+        {
+            "word": "マニュアル",
+            "frequency": 21,
+            "coverage": 2,
+            "score": 0.63,
+            "category": "Standard"
+        },
+        {
+            "word": "スキルアップ",
+            "frequency": 20,
+            "coverage": 2,
+            "score": 0.62,
+            "category": "Standard"
+        },
+        {
+            "word": "方法",
+            "frequency": 19,
+            "coverage": 3,
+            "score": 0.61,
+            "category": "Standard"
+        },
+        {
+            "word": "相談窓口",
+            "frequency": 18,
+            "coverage": 2,
+            "score": 0.6,
+            "category": "Standard"
+        },
+        {
+            "word": "設置",
+            "frequency": 17,
+            "coverage": 2,
+            "score": 0.59,
+            "category": "Standard"
+        },
+        {
+            "word": "許可",
+            "frequency": 16,
+            "coverage": 2,
+            "score": 0.58,
+            "category": "Standard"
+        },
+        {
+            "word": "事業報告書",
+            "frequency": 15,
+            "coverage": 2,
+            "score": 0.57,
+            "category": "Standard"
+        },
+        {
+            "word": "メリット",
+            "frequency": 14,
+            "coverage": 2,
+            "score": 0.56,
+            "category": "Standard"
+        },
+        {
+            "word": "デメリット",
+            "frequency": 14,
+            "coverage": 2,
+            "score": 0.55,
+            "category": "Standard"
+        },
+        {
+            "word": "集合研修",
+            "frequency": 13,
+            "coverage": 2,
+            "score": 0.54,
+            "category": "Standard"
+        },
+        {
+            "word": "オンライン",
+            "frequency": 13,
+            "coverage": 2,
+            "score": 0.53,
+            "category": "Standard"
+        },
+        {
+            "word": "コスト",
+            "frequency": 12,
+            "coverage": 3,
+            "score": 0.52,
+            "category": "Standard"
+        },
+        {
+            "word": "業務",
+            "frequency": 12,
+            "coverage": 3,
+            "score": 0.51,
+            "category": "Standard"
+        },
+        {
+            "word": "配慮",
+            "frequency": 11,
+            "coverage": 3,
+            "score": 0.5,
+            "category": "Standard"
+        },
+        {
+            "word": "リーダーシップ",
+            "frequency": 11,
+            "coverage": 2,
+            "score": 0.49,
+            "category": "Standard"
+        },
+        {
+            "word": "コミュニケーション",
+            "frequency": 10,
+            "coverage": 2,
+            "score": 0.48,
+            "category": "Standard"
+        },
+        {
+            "word": "専門知識",
+            "frequency": 10,
+            "coverage": 2,
+            "score": 0.47,
+            "category": "Standard"
+        },
+        {
+            "word": "4年目以降",
+            "frequency": 9,
+            "coverage": 2,
+            "score": 0.46,
+            "category": "Standard"
+        },
+        {
+            "word": "ステップ",
+            "frequency": 9,
+            "coverage": 2,
+            "score": 0.45,
+            "category": "Standard"
+        },
+        {
+            "word": "流れ",
+            "frequency": 8,
+            "coverage": 2,
+            "score": 0.44,
+            "category": "Standard"
+        },
+        {
+            "word": "活用",
+            "frequency": 8,
+            "coverage": 2,
+            "score": 0.43,
+            "category": "Standard"
+        },
+        {
+            "word": "職業能力形成",
+            "frequency": 7,
+            "coverage": 2,
+            "score": 0.42,
+            "category": "Standard"
+        },
+        {
+            "word": "モチベーション",
+            "frequency": 7,
+            "coverage": 2,
+            "score": 0.41,
+            "category": "Standard"
+        },
+        {
+            "word": "罰則",
+            "frequency": 6,
+            "coverage": 1,
+            "score": 0.4,
+            "category": "Unique"
+        },
+        {
+            "word": "受講率",
+            "frequency": 6,
+            "coverage": 1,
+            "score": 0.39,
+            "category": "Unique"
+        },
+        {
+            "word": "割増賃金",
+            "frequency": 5,
+            "coverage": 1,
+            "score": 0.38,
+            "category": "Unique"
+        },
+        {
+            "word": "法定休日",
+            "frequency": 5,
+            "coverage": 1,
+            "score": 0.37,
+            "category": "Unique"
+        },
+        {
+            "word": "インセンティブ",
+            "frequency": 4,
+            "coverage": 1,
+            "score": 0.36,
+            "category": "Unique"
+        },
+        {
+            "word": "形骸化",
+            "frequency": 4,
+            "coverage": 1,
+            "score": 0.35,
+            "category": "Unique"
+        },
+        {
+            "word": "マージン率",
+            "frequency": 3,
+            "coverage": 1,
+            "score": 0.34,
+            "category": "Unique"
+        },
+        {
+            "word": "人材投資促進税制",
+            "frequency": 3,
+            "coverage": 1,
+            "score": 0.33,
+            "category": "Unique"
+        },
+        {
+            "word": "ILO",
+            "frequency": 2,
+            "coverage": 1,
+            "score": 0.32,
+            "category": "Unique"
+        },
+        {
+            "word": "不安",
+            "frequency": 5,
+            "coverage": 1,
+            "score": 0.31,
+            "category": "Unique"
+        },
+        {
+            "word": "動機",
+            "frequency": 4,
+            "coverage": 1,
+            "score": 0.3,
+            "category": "Unique"
+        },
+        {
+            "word": "スキル俯瞰マップ",
+            "frequency": 3,
+            "coverage": 1,
+            "score": 0.29,
+            "category": "Unique"
+        },
+        {
+            "word": "フレームワーク",
+            "frequency": 3,
+            "coverage": 1,
+            "score": 0.28,
+            "category": "Unique"
+        },
+        {
+            "word": "顧客価値",
+            "frequency": 2,
+            "coverage": 1,
+            "score": 0.27,
+            "category": "Unique"
+        },
+        {
+            "word": "EQ",
+            "frequency": 2,
+            "coverage": 1,
+            "score": 0.26,
+            "category": "Unique"
+        },
+        {
+            "word": "IQ",
+            "frequency": 2,
+            "coverage": 1,
+            "score": 0.25,
+            "category": "Unique"
+        },
+        {
+            "word": "均等・均衡待遇",
+            "frequency": 5,
+            "coverage": 1,
+            "score": 0.24,
+            "category": "Unique"
+        },
+        {
+            "word": "同一労働同一賃金",
+            "frequency": 4,
+            "coverage": 1,
+            "score": 0.23,
+            "category": "Unique"
+        },
+        {
+            "word": "不合理な待遇差",
+            "frequency": 3,
+            "coverage": 1,
+            "score": 0.22,
+            "category": "Unique"
+        },
+        {
+            "word": "応募資格",
+            "frequency": 2,
+            "coverage": 1,
+            "score": 0.21,
+            "category": "Unique"
+        },
+        {
+            "word": "階層別訓練",
+            "frequency": 5,
+            "coverage": 1,
+            "score": 0.2,
+            "category": "Unique"
+        },
+        {
+            "word": "職能別訓練",
+            "frequency": 4,
+            "coverage": 1,
+            "score": 0.19,
+            "category": "Unique"
+        },
+        {
+            "word": "即戦力",
+            "frequency": 3,
+            "coverage": 1,
+            "score": 0.18,
+            "category": "Unique"
+        },
+        {
+            "word": "自己管理",
+            "frequency": 3,
+            "coverage": 1,
+            "score": 0.17,
+            "category": "Unique"
+        },
+        {
+            "word": "基礎",
+            "frequency": 3,
+            "coverage": 1,
+            "score": 0.16,
+            "category": "Unique"
+        },
+        {
+            "word": "応用",
+            "frequency": 2,
+            "coverage": 1,
+            "score": 0.15,
+            "category": "Unique"
+        },
+        {
+            "word": "熟練",
+            "frequency": 2,
+            "coverage": 1,
+            "score": 0.14,
+            "category": "Unique"
+        },
+        {
+            "word": "多様性",
+            "frequency": 2,
+            "coverage": 1,
+            "score": 0.13,
+            "category": "Unique"
+        },
+        {
+            "word": "学習スタイル",
+            "frequency": 2,
+            "coverage": 1,
+            "score": 0.12,
+            "category": "Unique"
+        },
+        {
+            "word": "客観視",
+            "frequency": 1,
+            "coverage": 1,
+            "score": 0.11,
+            "category": "Unique"
+        },
+        {
+            "word": "恐怖焦燥",
+            "frequency": 1,
+            "coverage": 1,
+            "score": 0.1,
+            "category": "Unique"
+        }
+    ],
+    "related_keywords": [
+        {
+            "word": "派遣 キャリアアップ教育訓練 eラーニング",
+            "type": "派生語",
+            "score": 0.95
+        },
+        {
+            "word": "派遣 キャリアアップ教育訓練 義務",
+            "type": "派生語",
+            "score": 0.94
+        },
+        {
+            "word": "キャリアアップに資する教育訓練計画",
+            "type": "派生語",
+            "score": 0.93
+        },
+        {
+            "word": "派遣 キャリアアップ教育訓練 8時間",
+            "type": "派生語",
+            "score": 0.92
+        },
+        {
+            "word": "派遣 キャリアアップ教育訓練 4年目以降",
+            "type": "派生語",
+            "score": 0.91
+        },
+        {
+            "word": "派遣社員 研修",
+            "type": "類義語",
+            "score": 0.9
+        },
+        {
+            "word": "派遣社員 人材育成",
+            "type": "類義語",
+            "score": 0.89
+        },
+        {
+            "word": "派遣社員 スキルアップ",
+            "type": "類義語",
+            "score": 0.88
+        },
+        {
+            "word": "派遣社員 能力開発",
+            "type": "類義語",
+            "score": 0.87
+        },
+        {
+            "word": "派遣法改正 教育訓練",
+            "type": "関連トピック",
+            "score": 0.86
+        },
+        {
+            "word": "派遣 キャリアコンサルティング 義務",
+            "type": "関連トピック",
+            "score": 0.85
+        },
+        {
+            "word": "派遣 教育訓練 費用",
+            "type": "派生語",
+            "score": 0.84
+        },
+        {
+            "word": "派遣 教育訓練 助成金",
+            "type": "関連トピック (ギャップ)",
+            "score": 0.83
+        },
+        {
+            "word": "派遣 教育訓練 有給",
+            "type": "派生語",
+            "score": 0.82
+        },
+        {
+            "word": "派遣 教育訓練 OJT",
+            "type": "派生語",
+            "score": 0.81
+        },
+        {
+            "word": "派遣 無期雇用 教育訓練",
+            "type": "派生語",
+            "score": 0.8
+        },
+        {
+            "word": "派遣 同一労働同一賃金 教育訓練",
+            "type": "関連トピック",
+            "score": 0.79
+        },
+        {
+            "word": "派遣 教育訓練 カリキュラム",
+            "type": "派生語",
+            "score": 0.78
+        },
+        {
+            "word": "派遣教育訓練報告書",
+            "type": "関連トピック",
+            "score": 0.77
+        },
+        {
+            "word": "派遣元 義務",
+            "type": "関連トピック",
+            "score": 0.76
+        },
+        {
+            "word": "派遣先 義務",
+            "type": "関連トピック",
+            "score": 0.75
+        },
+        {
+            "word": "派遣 外国人 教育訓練",
+            "type": "関連トピック (ギャップ)",
+            "score": 0.74
+        },
+        {
+            "word": "中小企業 派遣 教育訓練",
+            "type": "関連トピック (ペルソナ)",
+            "score": 0.73
+        },
+        {
+            "word": "派遣 教育訓練 低コスト",
+            "type": "関連トピック (ペルソナ)",
+            "score": 0.72
+        },
+        {
+            "word": "派遣 教育訓練 受講率",
+            "type": "関連トピック",
+            "score": 0.71
+        },
+        {
+            "word": "派遣 教育訓練 罰則",
+            "type": "関連トピック",
+            "score": 0.7
+        },
+        {
+            "word": "eラーニング 派遣法 対応",
+            "type": "派生語",
+            "score": 0.69
+        },
+        {
+            "word": "キャリア形成支援制度",
+            "type": "類義語",
+            "score": 0.68
+        },
+        {
+            "word": "職業能力開発促進法",
+            "type": "関連トピック",
+            "score": 0.67
+        },
+        {
+            "word": "派遣 入職時訓練",
+            "type": "派生語",
+            "score": 0.66
+        },
+        {
+            "word": "派遣 安全衛生教育",
+            "type": "関連トピック",
+            "score": 0.65
+        },
+        {
+            "word": "派遣 マナー研修",
+            "type": "関連トピック",
+            "score": 0.64
+        },
+        {
+            "word": "派遣 PCスキル研修",
+            "type": "関連トピック",
+            "score": 0.63
+        },
+        {
+            "word": "派遣 リーダー研修",
+            "type": "関連トピック",
+            "score": 0.62
+        },
+        {
+            "word": "派遣 キャリアパス",
+            "type": "関連トピック",
+            "score": 0.61
+        }
+    ],
+    "keyword_categorization": {
+        "total_keywords": 125,
+        "essential": {
+            "count": 30,
+            "words": [
+                "派遣社員",
+                "義務",
+                "労働者派遣法",
+                "eラーニング",
+                "計画",
+                "実施",
+                "スキル",
+                "キャリア形成",
+                "派遣元",
+                "派遣先",
+                "目的",
+                "時間",
+                "有給",
+                "無償",
+                "措置",
+                "OJT",
+                "段階的かつ体系的",
+                "3年間",
+                "8時間以上",
+                "キャリアコンサルティング",
+                "厚生労働省",
+                "要件",
+                "機会",
+                "提供",
+                "正社員",
+                "内容",
+                "対象",
+                "義務化",
+                "費用",
+                "策定"
+            ],
+            "description": "Essential (必須): 競合記事の75%以上 (3-4記事) が使用。記事の核となる最重要キーワード。"
+        },
+        "standard": {
+            "count": 31,
+            "words": [
+                "賃金",
+                "処遇",
+                "向上",
+                "能力",
+                "研修",
+                "無期雇用",
+                "カリキュラム",
+                "マニュアル",
+                "スキルアップ",
+                "方法",
+                "相談窓口",
+                "設置",
+                "許可",
+                "事業報告書",
+                "メリット",
+                "デメリット",
+                "集合研修",
+                "オンライン",
+                "コスト",
+                "業務",
+                "配慮",
+                "リーダーシップ",
+                "コミュニケーション",
+                "専門知識",
+                "4年目以降",
+                "ステップ",
+                "流れ",
+                "活用",
+                "職業能力形成",
+                "モチベーション",
+                "罰則"
+            ],
+            "description": "Standard (標準): 競合記事の50% (2記事) が使用。一般的・標準的なトピックで使用されるキーワード。"
+        },
+        "unique": {
+            "count": 64,
+            "words": [
+                "受講率",
+                "割増賃金",
+                "法定休日",
+                "インセンティブ",
+                "形骸化",
+                "マージン率",
+                "人材投資促進税制",
+                "ILO",
+                "不安",
+                "動機",
+                "スキル俯瞰マップ",
+                "フレームワーク",
+                "顧客価値",
+                "EQ",
+                "IQ",
+                "均等・均衡待遇",
+                "同一労働同一賃金",
+                "不合理な待遇差",
+                "応募資格",
+                "階層別訓練",
+                "職能別訓練",
+                "即戦力",
+                "自己管理",
+                "基礎",
+                "応用",
+                "熟練",
+                "多様性",
+                "学習スタイル",
+                "客観視",
+                "恐怖焦燥",
+                "助成金",
+                "外国人",
+                "低コスト",
+                "中小企業",
+                "解決",
+                "導入",
+                "効率化",
+                "プログラム",
+                "メニュー",
+                "選択",
+                "選び方",
+                "コンプライアンス",
+                "雇用安定",
+                "人材開発",
+                "待遇改善",
+                "報告書",
+                "安全衛生教育",
+                "マナー研修",
+                "PCスキル研修",
+                "リーダー研修",
+                "キャリアパス",
+                "職業能力開発促進法",
+                "入職時訓練",
+                "自宅受講",
+                "スケジュール調整",
+                "IT環境",
+                "業務効率",
+                "市場価値",
+                "交通費",
+                "業務命令",
+                "深夜割増",
+                "許可基準",
+                "法人税額",
+                "控除"
+            ],
+            "description": "Unique (独自性): 競合記事の25% (1記事) が使用。または競合が使用していないがペルソナ（工程0）にとって重要なキーワード。差別化の源泉。"
+        }
+    },
+    "phase_mapping": {
+        "phase1_anxiety": {
+            "count": 25,
+            "keywords": [
+                "義務",
+                "義務化",
+                "罰則",
+                "法改正",
+                "注意点",
+                "課題",
+                "派遣法",
+                "待遇差",
+                "不合理な待遇差",
+                "許可",
+                "更新",
+                "事業報告書",
+                "不安",
+                "恐怖焦燥",
+                "リスク",
+                "損失",
+                "受講率",
+                "低い",
+                "形骸化",
+                "割増賃金",
+                "負担",
+                "コスト",
+                "法定休日",
+                "深夜割増",
+                "不許可"
+            ],
+            "description": "Phase 1 (不安・課題認識): 読者の扁桃体を刺激し、法的義務やコスト、運用の課題を認識させるキーワード。導入部で使用。"
+        },
+        "phase2_understanding": {
+            "count": 55,
+            "keywords": [
+                "とは",
+                "意味",
+                "概要",
+                "内容",
+                "要件",
+                "目的",
+                "段階的かつ体系的",
+                "計画",
+                "策定",
+                "方法",
+                "やり方",
+                "e-ラーニング",
+                "OJT",
+                "集合研修",
+                "オンライン",
+                "メリット",
+                "デメリット",
+                "比較",
+                "階層別訓練",
+                "職能別訓練",
+                "カリキュラム",
+                "3年間",
+                "毎年",
+                "8時間以上",
+                "4年目以降",
+                "有給",
+                "無償",
+                "費用",
+                "対象",
+                "すべての派遣社員",
+                "無期雇用",
+                "キャリアコンサルティング",
+                "相談窓口",
+                "設置",
+                "厚生労働省",
+                "労働者派遣事業関係業務取扱要領",
+                "同一労働同一賃金",
+                "均等・均衡待遇",
+                "派遣元",
+                "派遣先",
+                "措置",
+                "協力",
+                "情報提供",
+                "マニュアル",
+                "ステップ",
+                "流れ",
+                "基礎",
+                "応用",
+                "熟練",
+                "学習スタイル",
+                "フレームワーク",
+                "種類別",
+                "勤続年数別",
+                "職位別",
+                "入職時訓練"
+            ],
+            "description": "Phase 2 (理解・納得): 読者の前頭前野に働きかけ、法的要件や具体的な実施方法を論理的に解説するキーワード。記事本編で使用。"
+        },
+        "phase3_action": {
+            "count": 35,
+            "keywords": [
+                "スキルアップ",
+                "キャリアアップ",
+                "スキル向上",
+                "専門知識",
+                "リーダーシップ",
+                "コミュニケーション",
+                "賃金",
+                "処遇",
+                "向上",
+                "正社員",
+                "登用",
+                "実現",
+                "解決",
+                "導入",
+                "活用",
+                "効率化",
+                "コスト削減",
+                "助成金",
+                "プログラム",
+                "メニュー",
+                "選択",
+                "選び方",
+                "モチベーション向上",
+                "即戦力",
+                "顧客価値",
+                "スキル俯瞰マップ",
+                "EQ",
+                "IQ",
+                "最適化",
+                "低コスト",
+                "中小企業",
+                "外国人",
+                "インセンティブ",
+                "動機",
+                "自己管理"
+            ],
+            "description": "Phase 3 (行動決定): 読者の線条体を刺激し、教育訓練実施後のポジティブな未来（報酬）を予測させるキーワード。記事後半・CTA周辺で使用。"
+        }
+    },
+    "llmo_elements": {
+        "voice_search_keywords": {
+            "count": 20,
+            "keywords": [
+                "とは",
+                "なぜ",
+                "どのように",
+                "いつから",
+                "何時間",
+                "誰が",
+                "費用は",
+                "有給ですか",
+                "義務ですか",
+                "しないとどうなる",
+                "やり方",
+                "方法",
+                "違い",
+                "対象者",
+                "4年目以降は",
+                "罰則はありますか",
+                "eラーニングでもいい",
+                "OJTは含まれるか",
+                "助成金は使えるか",
+                "無期雇用は"
+            ],
+            "description": "音声検索・AIチャットでの自然な質問（口語）に対応するためのキーワード。"
+        },
+        "question_format_keywords": {
+            "count": 20,
+            "keywords": [
+                "キャリアアップに資する教育訓練とは？",
+                "なぜ教育訓練が義務化されたのか？",
+                "派遣元と派遣先の役割分担は？",
+                "年間何時間実施すればよいか？",
+                "最初の3年間と4年目以降の違いは？",
+                "教育訓練は有給か無給か？",
+                "費用は誰が負担するのか？",
+                "e-ラーニングで実施しても良いか？",
+                "OJTは教育訓練に含まれるか？",
+                "キャリアコンサルティングとは何か？",
+                "実施しない場合の罰則は？",
+                "無期雇用派遣社員の扱いは？",
+                "同一労働同一賃金との関係は？",
+                "どのようなカリキュラムが良いか？",
+                "助成金は活用できるか？",
+                "外国人派遣社員への対応は？",
+                "受講率を上げる方法は？",
+                "事業報告書への記載方法は？",
+                "入職時訓練とは？",
+                "コストを抑える方法は？"
+            ],
+            "description": "FAQセクションやH2見出しとして使用し、AIによる引用（AI Citation）を最大化するための質問形式キーワード。"
+        }
+    },
+    "behavioral_economics_triggers": {
+        "loss_aversion": {
+            "count": 16,
+            "keywords": [
+                "義務",
+                "罰則",
+                "違反",
+                "許可",
+                "更新",
+                "不許可",
+                "リスク",
+                "待遇差",
+                "不合理な",
+                "負担",
+                "コスト",
+                "割増賃金",
+                "形骸化",
+                "有名無実",
+                "損失",
+                "機会損失"
+            ],
+            "description": "損失回避: 「法的義務を果たせない」「コストが無駄になる」という損失や不安を喚起するキーワード。"
+        },
+        "social_proof": {
+            "count": 5,
+            "keywords": [
+                "e-ラーニングの活用",
+                "増えている",
+                "一般企業",
+                "正社員と同様",
+                "導入事例"
+            ],
+            "description": "社会的証明: 「他の会社もやっている」という同調圧力を利用するキーワード。"
+        },
+        "authority": {
+            "count": 8,
+            "keywords": [
+                "労働者派遣法",
+                "厚生労働省",
+                "職業安定局",
+                "労働者派遣事業関係業務取扱要領",
+                "法に定められた",
+                "専門家",
+                "社会保険労務士",
+                "ILO"
+            ],
+            "description": "権威性: 「法律で決まっている」「専門家が推奨している」という権威に基づくキーワード。"
+        },
+        "consistency": {
+            "count": 8,
+            "keywords": [
+                "計画",
+                "策定",
+                "段階的かつ体系的",
+                "ステップ",
+                "流れ",
+                "基礎",
+                "応用",
+                "熟練"
+            ],
+            "description": "一貫性: 「計画的にステップを踏む」という論理的な一貫性を持たせるキーワード。"
+        },
+        "liking": {
+            "count": 7,
+            "keywords": [
+                "気分の良い仕事",
+                "ともに探り",
+                "スキルアップ",
+                "キャリアアップ",
+                "モチベーション向上",
+                "お悩み",
+                "課題解決"
+            ],
+            "description": "好意: ポジティブな未来や共感を示し、読者からの好意を獲得するキーワード。"
+        },
+        "scarcity": {
+            "count": 4,
+            "keywords": [
+                "助成金",
+                "枠",
+                "期限",
+                "申請"
+            ],
+            "description": "希少性: 競合記事にはないが、「助成金の申請枠」などで限定的に使用可能なキーワード。"
+        }
+    },
+    "cta_keywords": {
+        "count": 20,
+        "keywords": [
+            "e-ラーニング",
+            "導入",
+            "活用",
+            "低コスト",
+            "コスト削減",
+            "効率化",
+            "助成金",
+            "申請",
+            "プログラム",
+            "プラン",
+            "見積もり",
+            "問い合わせ",
+            "資料請求",
+            "デモ",
+            "無料",
+            "簡単",
+            "中小企業",
+            "外国人対応",
+            "法対応",
+            "解決"
+        ],
+        "description": "CTA (Call to Action) 周辺で使用し、読者の行動（問い合わせ、資料請求）を直接促すためのキーワード。"
+    },
+    "semantic_clusters": [
+        {
+            "cluster_name": "法的要件・義務",
+            "count": 16,
+            "keywords": [
+                "労働者派遣法",
+                "義務化",
+                "必須",
+                "要件",
+                "厚生労働省",
+                "3年間",
+                "8時間以上",
+                "4年目以降",
+                "有給",
+                "無償",
+                "派遣元",
+                "派遣先",
+                "措置",
+                "罰則",
+                "許可",
+                "事業報告書"
+            ]
+        },
+        {
+            "cluster_name": "教育訓練の形態・手法",
+            "count": 10,
+            "keywords": [
+                "e-ラーニング",
+                "OJT",
+                "集合研修",
+                "オンライン",
+                "研修",
+                "カリキュラム",
+                "プログラム",
+                "階層別訓練",
+                "職能別訓練",
+                "入職時訓練"
+            ]
+        },
+        {
+            "cluster_name": "キャリア・スキル向上",
+            "count": 10,
+            "keywords": [
+                "キャリア形成",
+                "スキルアップ",
+                "専門知識",
+                "リーダーシップ",
+                "コミュニケーション",
+                "能力",
+                "段階的かつ体系的",
+                "正社員",
+                "賃金",
+                "処遇"
+            ]
+        },
+        {
+            "cluster_name": "実施・運用・コスト",
+            "count": 11,
+            "keywords": [
+                "計画",
+                "策定",
+                "実施",
+                "運用",
+                "費用",
+                "コスト",
+                "時間",
+                "配慮",
+                "対象",
+                "受講率",
+                "効率化"
+            ]
+        },
+        {
+            "cluster_name": "関連制度・概念",
+            "count": 6,
+            "keywords": [
+                "キャリアコンサルティング",
+                "相談窓口",
+                "同一労働同一賃金",
+                "均等・均衡待遇",
+                "無期雇用",
+                "助成金"
+            ]
+        }
+    ],
+    "keyword_density_analysis": {
+        "main_keyword": {
+            "word": "キャリアアップ に資する 教育訓練",
+            "average_density": "2.8%",
+            "recommendation": "タイトル、H1、導入部、および複数のH2見出しに含め、本文全体で1.5%〜2.5%の密度を目指す。"
+        },
+        "essential_keywords": {
+            "words": [
+                "派遣社員",
+                "義務",
+                "eラーニング",
+                "労働者派遣法"
+            ],
+            "average_density": "各1.0%〜2.2%",
+            "recommendation": "各Essentialキーワードを記事全体に自然に分散させ、最低でも1〜2回は必ず言及する。"
+        },
+        "recommendation": "競合は法的要件の説明に密度を割いている。自社記事では「eラーニング」「低コスト」「助成金」「外国人」といった解決策（Phase 3）のキーワード密度を意識的に高め、差別化を図る。"
+    },
+    "lsi_keywords": {
+        "count": 10,
+        "keywords": [
+            "人材育成",
+            "人材開発",
+            "能力開発",
+            "スキル習得",
+            "派遣スタッフ",
+            "法対応",
+            "コンプライアンス",
+            "雇用安定",
+            "待遇改善",
+            "キャリアパス"
+        ],
+        "description": "LSI (Latent Semantic Indexing): メインキーワードと意味的に関連性が高く、トピックの網羅性を高めるために使用するキーワード。"
+    },
+    "competitor_keyword_gaps": {
+        "count": 8,
+        "keywords": [
+            {
+                "word": "助成金",
+                "analysis": "工程0のペルソナ仮説では「低コスト」の具体的解決策として最重要だが、競合4記事では「人材投資促進税制」 への言及が1件あるのみで、「派遣向けの教育訓練助成金」への言及が皆無。最大の差別化機会。",
+                "score": 1
+            },
+            {
+                "word": "外国人",
+                "analysis": "工程0のペルソナ仮説で「外国人スタッフ対応」がニーズとして挙げられているが、競合4記事では一切言及なし。ニッチだが強力な差別化ポイント。",
+                "score": 0.95
+            },
+            {
+                "word": "低コスト (具体的な費用・プラン)",
+                [cite_start
+                ]"analysis": "「コスト」[cite: 6] への言及はあるが、ペルソナが求める「低予算プラン」「中小企業向け」といった具体的な費用感や解決策の提示がない。",
+                "score": 0.9
+            },
+            {
+                "word": "受講率 (向上ノウハウ)",
+                "analysis": "jinjibu.jp でQ&Aとして課題が提示されているが、具体的な解決策（eラーニングの管理機能、インセンティブ設計など）が深掘りされていない。",
+                "score": 0.8
+            },
+            {
+                "word": "罰則 (具体的なリスク)",
+                [cite_start
+                ]"analysis": "「義務」[cite: 3, 6] [cite_start]には触れているが、「実施しなかった場合の具体的な罰則」や「許可更新への影響」[cite: 3] についての言及が浅い。損失回避のフックとして強化可能。",
+                "score": 0.75
+            },
+            {
+                "word": "動機 (モチベーション)",
+                [cite_start
+                ]"analysis": "記事8 [cite: 5] [cite_start]と記事9 [cite: 6] で言及があるが、派遣社員本人の「動機付け」「モチベーション維持」という観点での具体的な手法が少ない。",
+                "score": 0.7
+            },
+            {
+                "word": "導入事例 (社会的証明)",
+                [cite_start
+                ]"analysis": "「e-ラーニングの活用が増えている」[cite: 3] という抽象的な言及のみで、具体的な「導入事例」や「成功事例」（社会的証明）が欠けている。",
+                "score": 0.65
+            },
+            {
+                "word": "中小企業",
+                "analysis": "工程0のペルソナは「中小派遣会社」だが、競合記事は一般論が中心。「中小企業特化」のキーワードが欠けている。",
+                "score": 0.6
+            }
+        ],
+        "description": "競合上位記事（本文抽出が成功した4記事）がカバーしていない、または言及が非常に薄いキーワード群。これらを戦略的に配置することが、記事の差別化とCVR向上に直結する。"
+    }
+}
