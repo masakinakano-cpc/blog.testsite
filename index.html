@@ -19,6 +19,41 @@
             background-attachment: fixed;
         }
 
+        .navigation {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            gap: 0;
+        }
+
+        .nav-link {
+            padding: 20px 40px;
+            text-decoration: none;
+            color: #555;
+            font-weight: 600;
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+
+        .nav-link:hover {
+            background: #f8f9fa;
+            color: #667eea;
+        }
+
+        .nav-link.active {
+            color: #667eea;
+            border-bottom: 3px solid #667eea;
+        }
+
         .header {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
@@ -443,6 +478,13 @@
     </style>
 </head>
 <body>
+    <nav class="navigation">
+        <div class="nav-container">
+            <a href="index.html" class="nav-link active">記事</a>
+            <a href="workflow.html" class="nav-link">AI制作フロー</a>
+        </div>
+    </nav>
+
     <div class="header">
         <div class="header-content">
             <h1>キャリアアップに資する教育訓練とは？<br>年8時間の義務を低コストで実現する5ステップ<br><span style="font-size: 0.7em; opacity: 0.9;">【2025年最新助成金情報】</span></h1>

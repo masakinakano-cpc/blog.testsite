@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI記事制作ワークフロー | SEOコンテンツ生成フロー</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.8;
+            color: #2c3e50;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            background-attachment: fixed;
+        }
+
+        .navigation {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            gap: 0;
+        }
+
+        .nav-link {
+            padding: 20px 40px;
+            text-decoration: none;
+            color: #555;
+            font-weight: 600;
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+
+        .nav-link:hover {
+            background: #f8f9fa;
+            color: #667eea;
+        }
+
+        .nav-link.active {
+            color: #667eea;
+            border-bottom: 3px solid #667eea;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+        }
+
+        .header h1 {
+            font-size: 2.4em;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 40px auto;
+            background: white;
+            padding: 50px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+            border-radius: 16px;
+        }
+
+        .workflow-intro {
+            background: linear-gradient(135deg, #e8f4f8 0%, #d4e9f2 100%);
+            border-left: 5px solid #3498db;
+            padding: 30px;
+            margin-bottom: 50px;
+            border-radius: 8px;
+        }
+
+        .workflow-intro h2 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.6em;
+        }
+
+        .flow-container {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            position: relative;
+        }
+
+        .flow-step {
+            background: white;
+            border: 3px solid #e8ecef;
+            border-radius: 12px;
+            padding: 30px;
+            position: relative;
+            transition: all 0.3s;
+        }
+
+        .flow-step:hover {
+            border-color: #667eea;
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.2);
+            transform: translateX(5px);
+        }
+
+        .flow-step.good {
+            border-color: #27ae60;
+            background: linear-gradient(135deg, #f0f9f4 0%, #e1f5e8 100%);
+        }
+
+        .flow-step.warning {
+            border-color: #f39c12;
+            background: linear-gradient(135deg, #fff9e6 0%, #fff3cd 100%);
+        }
+
+        .flow-step.error {
+            border-color: #e74c3c;
+            background: linear-gradient(135deg, #fff5f5 0%, #ffe5e5 100%);
+        }
+
+        .flow-step.skip {
+            border-color: #95a5a6;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            opacity: 0.7;
+        }
+
+        .flow-step.parallel {
+            border-left-width: 8px;
+            border-left-color: #9b59b6;
+        }
+
+        .step-header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .step-number {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+            font-weight: 700;
+            flex-shrink: 0;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .step-number.skip-num {
+            background: #95a5a6;
+        }
+
+        .step-title {
+            flex: 1;
+        }
+
+        .step-title h3 {
+            font-size: 1.5em;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+
+        .step-title .subtitle {
+            color: #7f8c8d;
+            font-size: 0.95em;
+        }
+
+        .step-content {
+            margin-left: 80px;
+        }
+
+        .step-content p {
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .badge-good {
+            background: #27ae60;
+            color: white;
+        }
+
+        .badge-warning {
+            background: #f39c12;
+            color: white;
+        }
+
+        .badge-error {
+            background: #e74c3c;
+            color: white;
+        }
+
+        .badge-skip {
+            background: #95a5a6;
+            color: white;
+        }
+
+        .badge-parallel {
+            background: #9b59b6;
+            color: white;
+        }
+
+        .inputs {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 15px;
+            border-left: 4px solid #667eea;
+        }
+
+        .inputs-title {
+            font-weight: 600;
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 0.95em;
+        }
+
+        .inputs ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .inputs li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+            color: #555;
+            font-size: 0.9em;
+        }
+
+        .inputs li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        .comment-box {
+            background: #fef5e7;
+            border-left: 4px solid #f39c12;
+            padding: 20px;
+            margin-top: 15px;
+            border-radius: 8px;
+        }
+
+        .comment-box strong {
+            color: #d68910;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .arrow-down {
+            width: 0;
+            height: 0;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-top: 30px solid #667eea;
+            margin: 10px auto;
+            position: relative;
+        }
+
+        .arrow-down::after {
+            content: '';
+            position: absolute;
+            top: -35px;
+            left: -2px;
+            width: 4px;
+            height: 20px;
+            background: #667eea;
+            transform: translateX(-50%);
+        }
+
+        .parallel-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .summary-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 12px;
+            margin-top: 50px;
+        }
+
+        .summary-section h2 {
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+
+        .summary-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .summary-section li {
+            padding: 12px 0;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .summary-section li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px 20px;
+                margin: 20px 10px;
+            }
+
+            .step-content {
+                margin-left: 0;
+                margin-top: 20px;
+            }
+
+            .step-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .parallel-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navigation">
+        <div class="nav-container">
+            <a href="index.html" class="nav-link">記事</a>
+            <a href="workflow.html" class="nav-link active">AI制作フロー</a>
+        </div>
+    </nav>
+
+    <div class="header">
+        <h1>AI記事制作ワークフロー</h1>
+        <p>SEOコンテンツ生成の全工程を可視化</p>
+    </div>
+
+    <div class="container">
+        <div class="workflow-intro">
+            <h2>このフローについて</h2>
+            <p>本ページでは、AIを活用したSEO記事制作の全工程を詳細に解説します。各工程での使用ツール、AIの精度評価、発生した課題と対策を可視化しています。</p>
+        </div>
+
+        <div class="flow-container">
+
+            <!-- 工程0 -->
+            <div class="flow-step warning">
+                <div class="step-header">
+                    <div class="step-number">0</div>
+                    <div class="step-title">
+                        <h3>キーワード選定</h3>
+                        <p class="subtitle">キーワードプランナー + 専門家の知見</p>
+                    </div>
+                </div>
+                <div class="step-content">
+                    <span class="status-badge badge-warning">AI精度: 低</span>
+
+                    <div class="comment-box">
+                        <strong>評価コメント</strong>
+                        <p><strong>専門家の知見 vs AI</strong> = AIの精度の悪さが目立つ。キーワードプランナーとの乖離や根拠が出力根拠の回答が支離滅裂感が否めない。</p>
+                        <p><strong>推奨手法：</strong>専門家の知見でキーワードを決め、このプロンプトで工程0_キーワード選定結果.jsonを出力するのが現状のベストプラクティス。</p>
+                    </div>
+
+                    <div class="inputs">
+                        <div class="inputs-title">出力ファイル</div>
+                        <ul>
+                            <li>工程0_キーワード選定結果.json</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="arrow-down"></div>
+
+            <!-- 工程1 -->
+            <div class="flow-step skip">
+                <div class="step-header">
+                    <div class="step-number skip-num">1</div>
+                    <div class="step-title">
+                        <h3>キーワード入力</h3>
+                        <p class="subtitle">スキップ</p>
+                    </div>
+                </div>
+                <div class="step-content">
+                    <span class="status-badge badge-skip">SKIP</span>
+                    <p>不必要のためスキップ</p>
+                </div>
+            </div>
+
+            <div class="arrow-down"></div>
+
+            <!-- 工程2 & 2.1 -->
+            <div class="flow-step warning">
+                <div class="step-header">
+                    <div class="step-number">2</div>
+                    <div class="step-title">
+                        <h3>上位10サイト取得 + 競合記事本文抽出</h3>
+                        <p class="subtitle">工程2と2.1を統合（GAS使用）</p>
+                    </div>
+                </div>
+                <div class="step-content">
+                    <span class="status-badge badge-warning">AI精度: 低〜中</span>
+
+                    <div class="comment-box">
+                        <strong>評価コメント</strong>
+                        <p><strong>GAS vs AI</strong> = AIの精度の悪さが目立つ。上位サイトの取得は比較的合っている（及第点レベル）ものの、本文の出力はほぼ不可能（長文の読み込みと出力レベルが今のAIでは追いついていない印象）。</p>
+                        <p><strong>推奨手法：</strong>GAS（Google Apps Script）による自動化が最適。</p>
+                    </div>
+
+                    <div class="inputs">
+                        <div class="inputs-title">出力ファイル</div>
+                        <ul>
+                            <li>工程2_上位10サイト工程2.1（競合記事本文抽出）統合.csv</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="arrow-down"></div>
+
+            <!-- 工程3 並列処理 -->
+            <div style="text-align: center; margin: 30px 0;">
+                <span class="status-badge badge-parallel">並列処理開始</span>
+            </div>
+
+            <div class="parallel-container">
+                <!-- 工程3A -->
+                <div class="flow-step parallel good">
+                    <div class="step-header">
+                        <div class="step-number">3A</div>
+                        <div class="step-title">
+                            <h3>クエリ分析・ペルソナ深掘り</h3>
+                        </div>
+                    </div>
+                    <div class="step-content">
+                        <span class="status-badge badge-good">Good出力!</span>
+
+                        <div class="inputs">
+                            <div class="inputs-title">入力ファイル</div>
+                            <ul>
+                                <li>工程0_キーワード選定結果.json</li>
+                                <li>工程2_統合.csv</li>
+                            </ul>
+                        </div>
+
+                        <div class="inputs">
+                            <div class="inputs-title">出力ファイル</div>
+                            <ul>
+                                <li>工程3A_クエリ分析結果.json</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 工程3B -->
+                <div class="flow-step parallel good">
+                    <div class="step-header">
+                        <div class="step-number">3B</div>
+                        <div class="step-title">
+                            <h3>共起語・関連キーワード抽出</h3>
+                            <p class="subtitle" style="color: #9b59b6; font-weight: 600;">心臓部</p>
+                        </div>
+                    </div>
+                    <div class="step-content">
+                        <span class="status-badge badge-good">Good出力!</span>
+                        <span class="status-badge badge-warning">高負荷注意</span>
+
+                        <div class="comment-box">
+                            <strong>注意事項</strong>
+                            <p>処理に時間と負荷がかかりすぎて強制チャット終了が3回ほど発生。PC再起動で改善はされたものの、AIの再調整必要か？</p>
+                        </div>
+
+                        <div class="inputs">
+                            <div class="inputs-title">入力ファイル</div>
+                            <ul>
+                                <li>工程0_キーワード選定結果.json</li>
+                                <li>工程2_統合.csv</li>
+                            </ul>
+                        </div>
+
+                        <div class="inputs">
+                            <div class="inputs-title">出力ファイル</div>
+                            <ul>
+                                <li>工程3B_共起語抽出結果.json</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 工程3C -->
+                <div class="flow-step parallel good">
+                    <div class="step-header">
+                        <div class="step-number">3C</div>
+                        <div class="step-title">
+                            <h3>競合分析・差別化切り口発見</h3>
+                        </div>
+                    </div>
+                    <div class="step-content">
+                        <span class="status-badge badge-good">Good出力!</span>
+
+                        <div class="inputs">
+                            <div class="inputs-title">入力ファイル</div>
+                            <ul>
+                                <li>工程0_キーワード選定結果.json</li>
+                                <li>工程2_統合.csv</li>
+                            </ul>
+                        </div>
+
+                        <div class="inputs">
+                            <div class="inputs-title">出力ファイル</div>
+                            <ul>
+                                <li>工程3C_競合分析結果.json</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="arrow-down"></div>
+
+            <!-- 工程4 -->
+            <div class="flow-step good">
+                <div class="step-header">
+                    <div class="step-number">4</div>
+                    <div class="step-title">
+                        <h3>戦略的アウトライン生成（初回）</h3>
+                    </div>
+                </div>
+                <div class="step-content">
+                    <span class="status-badge badge-good">Good出力!</span>
+
+                    <div class="inputs">
+                        <div class="inputs-title">入力ファイル</div>
+                        <ul>
+                            <li>工程0_キーワード選定結果.json</li>
+                            <li>工程2_統合.csv</li>
+                            <li>工程3A_クエリ分析結果.json</li>
+                            <li>工程3B_共起語抽出結果.json</li>
+                            <li>工程3C_競合分析結果.json</li>
+                        </ul>
+                    </div>
+
+                    <div class="inputs">
+                        <div class="inputs-title">出力ファイル</div>
+                        <ul>
+                            <li>工程4_戦略的アウトライン.json</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="arrow-down"></div>
+
+            <!-- 工程5 -->
+            <div class="flow-step good">
+                <div class="step-header">
+                    <div class="step-number">5</div>
+                    <div class="step-title">
+                        <h3>一次情報追加・知識ギャップ解消</h3>
+                    </div>
+                </div>
+                <div class="step-content">
+                    <span class="status-badge badge-good">Good出力!</span>
+                    <span class="status-badge badge-warning">高負荷注意</span>
+
+                    <div class="comment-box">
+                        <strong>注意事項</strong>
+                        <p>処理に時間と負荷がかかりすぎて強制チャット終了が2回ほど発生。時間を置き改善はされたものの、AIの再調整必要か？</p>
+                    </div>
+
+                    <div class="inputs">
+                        <div class="inputs-title">入力ファイル</div>
+                        <ul>
+                            <li>工程0_キーワード選定結果.json</li>
+                            <li>工程3A_クエリ分析結果.json</li>
+                            <li>工程3B_共起語抽出結果.json</li>
+                            <li>工程3C_競合分析結果.json</li>
+                            <li>工程4_戦略的アウトライン.json</li>
+                        </ul>
+                    </div>
+
+                    <div class="inputs">
+                        <div class="inputs-title">出力ファイル</div>
+                        <ul>
+                            <li>工程5_一次情報収集結果.json</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="arrow-down"></div>
+
+            <!-- 工程6 -->
+            <div class="flow-step good">
+                <div class="step-header">
+                    <div class="step-number">6</div>
+                    <div class="step-title">
+                        <h3>アウトライン再生成（強化版）</h3>
+                    </div>
+                </div>
+                <div class="step-content">
+                    <span class="status-badge badge-good">Good出力!</span>
+
+                    <div class="inputs">
+                        <div class="inputs-title">入力ファイル</div>
+                        <ul>
+                            <li>工程0_キーワード選定結果.json</li>
+                            <li>工程3A_クエリ分析結果.json</li>
+                            <li>工程3B_共起語抽出結果.json</li>
+                            <li>工程3C_競合分析結果.json</li>
+                            <li>工程4_戦略的アウトライン.json</li>
+                            <li>工程5_一次情報収集結果.json</li>
+                        </ul>
+                    </div>
+
+                    <div class="inputs">
+                        <div class="inputs-title">出力ファイル</div>
+                        <ul>
+                            <li>工程6_アウトライン強化版.json</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="arrow-down"></div>
+
+            <!-- 工程7A -->
+            <div class="flow-step good">
+                <div class="step-header">
+                    <div class="step-number">7A</div>
+                    <div class="step-title">
+                        <h3>本文生成_初稿</h3>
+                    </div>
+                </div>
+                <div class="step-content">
+                    <span class="status-badge badge-good">Good出力!</span>
+
+                    <div class="inputs">
+                        <div class="inputs-title">入力ファイル</div>
+                        <ul>
+                            <li>工程0_キーワード選定結果.json</li>
+                            <li>工程3A_クエリ分析結果.json</li>
+                            <li>工程3B_共起語抽出結果.json</li>
+                            <li>工程3C_競合分析結果.json</li>
+                            <li>工程5_一次情報収集結果.json</li>
+                            <li>工程6_アウトライン強化版.json</li>
+                        </ul>
+                    </div>
+
+                    <div class="inputs">
+                        <div class="inputs-title">出力ファイル</div>
+                        <ul>
+                            <li>工程7A_本文初稿.md</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="arrow-down"></div>
+
+            <!-- 工程7B -->
+            <div class="flow-step good">
+                <div class="step-header">
+                    <div class="step-number">7B</div>
+                    <div class="step-title">
+                        <h3>本文生成_ブラッシュアップ</h3>
+                    </div>
+                </div>
+                <div class="step-content">
+                    <span class="status-badge badge-good">Good出力!</span>
+
+                    <div class="inputs">
+                        <div class="inputs-title">入力ファイル</div>
+                        <ul>
+                            <li>工程0_キーワード選定結果.json</li>
+                            <li>工程6_アウトライン強化版.json</li>
+                            <li>工程7A_本文初稿.md</li>
+                        </ul>
+                    </div>
+
+                    <div class="inputs">
+                        <div class="inputs-title">出力ファイル</div>
+                        <ul>
+                            <li>工程7B_本文ブラッシュアップ版.md</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="arrow-down"></div>
+
+            <!-- 工程8 -->
+            <div class="flow-step good">
+                <div class="step-header">
+                    <div class="step-number">8</div>
+                    <div class="step-title">
+                        <h3>ファクトチェック</h3>
+                    </div>
+                </div>
+                <div class="step-content">
+                    <span class="status-badge badge-good">Good出力!</span>
+
+                    <div class="inputs">
+                        <div class="inputs-title">入力ファイル</div>
+                        <ul>
+                            <li>工程0_キーワード選定結果.json</li>
+                            <li>工程5_一次情報収集結果.json</li>
+                            <li>工程6_アウトライン強化版.json</li>
+                            <li>工程7B_本文ブラッシュアップ版.md</li>
+                        </ul>
+                    </div>
+
+                    <div class="inputs">
+                        <div class="inputs-title">出力ファイル</div>
+                        <ul>
+                            <li>工程8_ファクトチェック結果.json</li>
+                            <li>工程8_FAQ統合版.md</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="arrow-down"></div>
+
+            <!-- 工程9 -->
+            <div class="flow-step good">
+                <div class="step-header">
+                    <div class="step-number">9</div>
+                    <div class="step-title">
+                        <h3>最終リライト・品質向上</h3>
+                    </div>
+                </div>
+                <div class="step-content">
+                    <span class="status-badge badge-good">Good出力!</span>
+
+                    <div class="inputs">
+                        <div class="inputs-title">入力ファイル</div>
+                        <ul>
+                            <li>工程0_キーワード選定結果.json</li>
+                            <li>工程3A_クエリ分析結果.json</li>
+                            <li>工程3B_共起語抽出結果.json</li>
+                            <li>工程3C_競合分析結果.json</li>
+                            <li>工程6_アウトライン強化版.json</li>
+                            <li>工程8_ファクトチェック結果.json</li>
+                            <li>工程8_FAQ統合版.md</li>
+                        </ul>
+                    </div>
+
+                    <div class="inputs">
+                        <div class="inputs-title">出力ファイル</div>
+                        <ul>
+                            <li>工程9_最終リライト版.md</li>
+                            <li>工程9_修正レポート.json</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="arrow-down"></div>
+
+            <!-- 工程10 -->
+            <div class="flow-step good">
+                <div class="step-header">
+                    <div class="step-number">10</div>
+                    <div class="step-title">
+                        <h3>SEO記事完成・最終出力（最終工程）</h3>
+                        <p class="subtitle">総合レポート作成</p>
+                    </div>
+                </div>
+                <div class="step-content">
+                    <span class="status-badge badge-good">Good出力!</span>
+
+                    <div class="inputs">
+                        <div class="inputs-title">入力ファイル</div>
+                        <ul>
+                            <li>工程0_キーワード選定結果.json</li>
+                            <li>工程3A_クエリ分析結果.json</li>
+                            <li>工程3B_共起語抽出結果.json</li>
+                            <li>工程3C_競合分析結果.json</li>
+                            <li>工程4_戦略的アウトライン.json</li>
+                            <li>工程5_一次情報収集結果.json</li>
+                            <li>工程6_アウトライン強化版.json</li>
+                            <li>工程8_ファクトチェック結果.json</li>
+                            <li>工程8_FAQ統合版.md</li>
+                            <li>工程9_最終リライト版.md</li>
+                            <li>工程9_修正レポート.json</li>
+                        </ul>
+                    </div>
+
+                    <div class="inputs">
+                        <div class="inputs-title">出力ファイル</div>
+                        <ul>
+                            <li>工程10_comprehensive_report.json</li>
+                            <li>工程10_final_article.md</li>
+                            <li>工程10_meta_info.json</li>
+                            <li>工程10_publication_checklist.md</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="summary-section">
+            <h2>総評・改善ポイント</h2>
+            <ul>
+                <li>各工程での動きは良好。根本を変える必要やエラーはなしと判断。</li>
+                <li>キーワードの選定や上位サイト取得や本文の取得の工程はAIの出力結果は、かなり懐疑的（ほぼ不可能に近いかも）⇒ただし、専門家の知見やキーワードプランナーやGASで代用可能。</li>
+                <li>工程3B：共起語・関連キーワード抽出【心臓部】と工程5：一次情報追加・知識ギャップ解消の工程で、タイミングや時間の問題かもしれないが、AIの回答が途中で切れてしまうことがあり、強制チャット終了されることが何度か発生。</li>
+                <li>⇒負荷を見直す必要あり？</li>
+            </ul>
+        </div>
+    </div>
+
+    <div style="background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%); color: white; padding: 40px 20px; text-align: center; margin-top: 80px;">
+        <p>&copy; 2025 AI SEOコンテンツ制作システム All Rights Reserved.</p>
+    </div>
+</body>
+</html>
