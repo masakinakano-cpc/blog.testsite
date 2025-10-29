@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,7 +22,7 @@
 
         .navigation {
             background: white;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -59,7 +60,7 @@
             color: white;
             padding: 60px 20px;
             text-align: center;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
         }
 
         .header h1 {
@@ -78,7 +79,7 @@
             margin: 40px auto;
             background: white;
             padding: 50px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
             border-radius: 16px;
         }
 
@@ -360,6 +361,7 @@
         }
     </style>
 </head>
+
 <body>
     <nav class="navigation">
         <div class="nav-container">
@@ -441,7 +443,8 @@
 
                     <div class="comment-box">
                         <strong>評価コメント</strong>
-                        <p><strong>GAS vs AI</strong> = AIの精度の悪さが目立つ。上位サイトの取得は比較的合っている（及第点レベル）ものの、本文の出力はほぼ不可能（長文の読み込みと出力レベルが今のAIでは追いついていない印象）。</p>
+                        <p><strong>GAS vs AI</strong> =
+                            AIの精度の悪さが目立つ。上位サイトの取得は比較的合っている（及第点レベル）ものの、本文の出力はほぼ不可能（長文の読み込みと出力レベルが今のAIでは追いついていない印象）。</p>
                         <p><strong>推奨手法：</strong>GAS（Google Apps Script）による自動化が最適。</p>
                     </div>
 
@@ -566,6 +569,12 @@
                 </div>
                 <div class="step-content">
                     <span class="status-badge badge-good">Good出力!</span>
+                    <span class="status-badge badge-warning">高負荷注意</span>
+
+                    <div class="comment-box">
+                        <strong>注意事項</strong>
+                        <p>処理に時間と負荷がかかりすぎて強制チャット終了が2回ほど発生。時間を置き改善はされたものの、AIの再調整必要か?</p>
+                    </div>
 
                     <div class="inputs">
                         <div class="inputs-title">入力ファイル</div>
@@ -844,14 +853,17 @@
             <ul>
                 <li>各工程での動きは良好。根本を変える必要やエラーはなしと判断。</li>
                 <li>キーワードの選定や上位サイト取得や本文の取得の工程はAIの出力結果は、かなり懐疑的（ほぼ不可能に近いかも）⇒ただし、専門家の知見やキーワードプランナーやGASで代用可能。</li>
-                <li>工程3B：共起語・関連キーワード抽出【心臓部】と工程5：一次情報追加・知識ギャップ解消の工程で、タイミングや時間の問題かもしれないが、AIの回答が途中で切れてしまうことがあり、強制チャット終了されることが何度か発生。</li>
+                <li>工程3B：共起語・関連キーワード抽出【心臓部】、工程4:戦略的アウトライン生成、工程5：一次情報追加・知識ギャップ解消の工程で、タイミングや時間の問題かもしれないが、AIの回答が途中で切れてしまうことがあり、強制チャット終了されることが何度か発生。
+                </li>
                 <li>⇒負荷を見直す必要あり？</li>
             </ul>
         </div>
     </div>
 
-    <div style="background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%); color: white; padding: 40px 20px; text-align: center; margin-top: 80px;">
+    <div
+        style="background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%); color: white; padding: 40px 20px; text-align: center; margin-top: 80px;">
         <p>&copy; 2025 AI SEOコンテンツ制作システム All Rights Reserved.</p>
     </div>
 </body>
+
 </html>
