@@ -339,6 +339,112 @@
             font-size: 1.2em;
         }
 
+        .review-section {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            margin-top: 30px;
+            border: 3px solid #e74c3c;
+        }
+
+        .review-section h2 {
+            color: #e74c3c;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .review-section h2::before {
+            content: '📋';
+            font-size: 1.2em;
+        }
+
+        .review-box {
+            background: #fff5f5;
+            border-left: 5px solid #e74c3c;
+            padding: 25px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+        }
+
+        .review-box h3 {
+            color: #c0392b;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .review-box p {
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 10px;
+        }
+
+        .proposal-section {
+            background: #f0f9ff;
+            border-left: 5px solid #3498db;
+            padding: 25px;
+            margin-top: 20px;
+            border-radius: 8px;
+        }
+
+        .proposal-section h3 {
+            color: #2980b9;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+
+        .proposal-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .proposal-list li {
+            padding: 12px 0;
+            padding-left: 30px;
+            position: relative;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .proposal-list li::before {
+            content: '▶';
+            position: absolute;
+            left: 0;
+            color: #3498db;
+            font-weight: bold;
+        }
+
+        .proposal-list li strong {
+            color: #2980b9;
+        }
+
+        .implementation-box {
+            background: #f9f9f9;
+            border: 2px solid #95a5a6;
+            padding: 20px;
+            margin-top: 15px;
+            border-radius: 8px;
+        }
+
+        .implementation-box h4 {
+            color: #7f8c8d;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .implementation-box ul {
+            list-style: disc;
+            padding-left: 25px;
+            color: #555;
+        }
+
+        .implementation-box li {
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+
         @media (max-width: 768px) {
             .container {
                 padding: 30px 20px;
@@ -857,6 +963,92 @@
                 </li>
                 <li>⇒負荷を見直す必要あり？</li>
             </ul>
+        </div>
+
+        <div class="review-section">
+            <h2>有識者レビュー・改善提案</h2>
+
+            <div class="review-box">
+                <h3>レビュー内容</h3>
+                <p><strong>【課題】CTA（Call To Action）の制御が不十分</strong></p>
+                <p>現在のワークフローでは、CTAに関する明示的な指示が不足しており、AIが自由にCTAを設定できる状態になっている。これにより、意図しないCTA（例：カリキュラムダウンロード等）が生成される可能性がある。</p>
+                <p><strong>【要件】</strong></p>
+                <p>クロスラーニングの広報サイトのTOPページへの誘導を固定CTAとして設定し、他のCTAは原則として出力しないよう制御する必要がある。</p>
+                <p><strong>【例外条件】</strong></p>
+                <p>以下の場合は、別のCTAを許容する：</p>
+                <ul style="list-style: disc; padding-left: 25px; margin-top: 10px;">
+                    <li>CTAに沿った資料（ダウンロードコンテンツ等）が実際に用意できる場合</li>
+                    <li>特定の注力キーワードについて、専用のランディングページを作成する工数が確保できる場合</li>
+                </ul>
+            </div>
+
+            <div class="proposal-section">
+                <h3>改善提案</h3>
+
+                <ul class="proposal-list">
+                    <li><strong>提案1: 工程0（キーワード選定）でのCTA仕様定義の追加</strong>
+                        <div class="implementation-box">
+                            <h4>実装方法</h4>
+                            <ul>
+                                <li>工程0_キーワード選定結果.jsonに「cta_specification」フィールドを追加</li>
+                                <li>デフォルトCTA（クロスラーニング広報サイトTOP）のURL、テキスト、説明を明記</li>
+                                <li>例外条件（別CTAを許可する条件）を記載</li>
+                                <li>後続の全工程でこのCTA仕様を参照するように指示</li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li><strong>提案2: 工程0.5（新規工程）としてCTA戦略設計を追加</strong>
+                        <div class="implementation-box">
+                            <h4>実装方法</h4>
+                            <ul>
+                                <li>工程0と工程2の間に、CTA専用の設計工程を挿入</li>
+                                <li>キーワードの性質（ナビゲーショナル/インフォメーショナル/トランザクショナル）を分析</li>
+                                <li>ユーザーの検索意図に基づき、デフォルトCTAが適切かを判断</li>
+                                <li>例外条件に該当する場合は、カスタムCTAを設計</li>
+                                <li>出力: 工程0.5_CTA戦略設計.json</li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li><strong>提案3: 工程7A〜10（コンテンツ生成工程）でのCTA固定化強制</strong>
+                        <div class="implementation-box">
+                            <h4>実装方法</h4>
+                            <ul>
+                                <li>各コンテンツ生成プロンプトに「CTA制約条件」セクションを追加</li>
+                                <li>工程0または0.5で定義されたCTA以外は使用しないことを明示</li>
+                                <li>AIが独自にCTAを考案することを禁止する指示を追加</li>
+                                <li>CTAのテキスト、URL、配置位置を厳密に指定</li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li><strong>提案4（推奨）: 提案1 + 提案3のハイブリッド実装</strong>
+                        <div class="implementation-box">
+                            <h4>実装方法</h4>
+                            <ul>
+                                <li><strong>フェーズ1:</strong> 工程0のプロンプトにCTA仕様定義を追加（軽量な実装）</li>
+                                <li><strong>フェーズ2:</strong> 工程7A、7B、9、10のプロンプトにCTA制約条件を追加</li>
+                                <li><strong>フェーズ3:</strong> 運用しながら問題が発生する場合は、工程0.5を追加検討</li>
+                                <li><strong>メリット:</strong> 既存フローへの影響を最小限に抑えつつ、CTA制御を実現</li>
+                                <li><strong>工数:</strong> 低〜中（工程0と4つの工程のプロンプト修正のみ）</li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+
+                <div style="background: #fff3cd; border-left: 5px solid #f39c12; padding: 20px; margin-top: 25px; border-radius: 8px;">
+                    <h4 style="color: #d68910; margin-bottom: 10px;">次のアクションアイテム</h4>
+                    <ol style="padding-left: 20px; color: #555; line-height: 1.8;">
+                        <li>クロスラーニング広報サイトTOPページの正確なURL、推奨CTAテキストを確認</li>
+                        <li>提案4（ハイブリッド実装）の承認を得る</li>
+                        <li>工程0のプロンプトにCTA仕様定義セクションを追記</li>
+                        <li>工程7A、7B、9、10のプロンプトにCTA制約条件を追記</li>
+                        <li>テスト記事を1本生成し、CTA制御が機能しているか検証</li>
+                        <li>問題があれば工程0.5の追加を検討</li>
+                    </ol>
+                </div>
+            </div>
         </div>
     </div>
 
